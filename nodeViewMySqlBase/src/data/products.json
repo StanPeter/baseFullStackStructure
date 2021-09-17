@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "Yoda",
+        "imageUrl": "https://cdn.xsd.cz/resize/2d8496adf6993dff9337974943d005df_resize=680,383_.jpg",
+        "description": "Guru older than history itself.",
+        "price": "85",
+        "userId": "1",
+        "active": true
+    },
+    {
+        "id": 2,
+        "title": "Anakin",
+        "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/Anakin-Skywalker_d3330724.jpeg",
+        "description": "Cheeky padawan with potencial.",
+        "price": "45",
+        "userId": "1",
+        "active": true
+    },
+    {
+        "id": 3,
+        "title": "Windu",
+        "imageUrl": "https://www.fandimefilmu.cz/files/images/2019/03/16/article_main_5rz2zle1wwa3tuc2.jpg",
+        "description": "Master of all 7 forms.",
+        "price": "60",
+        "userId": "1",
+        "active": true
+    }
+]
