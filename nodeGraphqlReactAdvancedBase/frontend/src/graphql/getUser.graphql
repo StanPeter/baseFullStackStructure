@@ -1,0 +1,6 @@
+query GetUser {
+    getUser {
+        id
+        email
+    }
+}

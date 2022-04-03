@@ -1,0 +1,8 @@
+query GetPhrases {
+    getPhrases {
+        phrase
+        streak
+        createdAt
+        practisedAt
+    }
+}

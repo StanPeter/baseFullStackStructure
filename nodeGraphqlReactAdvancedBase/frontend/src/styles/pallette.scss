@@ -1,0 +1,32 @@
+@use './vars' as var;
+
+.pallete-wrapper {
+    height: 100px;
+    border: 0.2px solid grey;
+    margin: 0.5rem;
+    display: inline-flex;
+    border-radius: 15px;
+
+    & div:first-child {
+        background-color: var.$main-color;
+    }
+    & div:nth-child(2) {
+        background-color: var.$light-shades;
+    }
+    & div:nth-child(3) {
+        background-color: var.$light-accent;
+    }
+    & div:nth-child(4) {
+        background-color: var.$dark-shades;
+    }
+    & div:last-child {
+        background-color: var.$dark-accent;
+    }
+
+    & div {
+        margin: 1rem;
+        border-radius: 10px;
+        width: 200px;
+        text-align: center;
+    }
+}

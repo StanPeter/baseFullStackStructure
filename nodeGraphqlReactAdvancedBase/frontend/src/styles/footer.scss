@@ -1,0 +1,209 @@
+@use './vars' as var;
+
+.footer {
+    height: 100px;
+    width: 100%;
+    color: white;
+    background-color: #4B86B4;
+    padding: 20px 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    border-radius: 200px 200px 0 0;
+}
+
+.copyright {
+    margin: 0.5rem 0;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.social-network {
+    list-style: none;
+    display: inline;
+    margin: auto;
+
+    li {
+        display: inline-flex;
+        margin: 0 1rem;
+    }
+}
+
+.social-circle a {
+    background-color: #E3E3E3;;
+}
+
+.social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.social-circle li i {
+    margin: 0;
+    line-height: 48px;
+    text-align: center;
+}
+
+/* footer social icons */
+.social-network {
+    a.icoFacebook:hover {
+        background-color: #3b5998;
+    }
+    a.icoTwitter:hover {
+        background-color: #33ccff;
+    }
+    a.icoGithub:hover {
+        background-color: #141313;
+    }
+    a.icoLinkedin:hover {
+        background-color: #007bb7;
+    }
+    a.icoInstagram:hover {
+        background: #f09433;
+        background: -moz-linear-gradient(
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+        );
+        background: -webkit-linear-gradient(
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+        );
+        background: linear-gradient(
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    }
+}
+
+.icoFacebook:hover i,
+.icoTwitter:hover i,
+.icoGithub:hover i,
+.icoInstagram:hover i,
+.icoLinkedin:hover i {
+    color: #E7EFF6;
+}
+
+.social-circle li a:hover i {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.social-circle i {
+    color: #2A4D69;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+}
+
+@media screen and (max-width: 500px) {
+    ul.social-network li {
+        display: inline;
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    ul.social-network li {
+        display: inline;
+        margin: 0 5px;
+    }
+    .social-circle li a {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto 0 auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .social-circle li i {
+        margin: 0;
+        line-height: 40px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    ul.social-network li {
+        display: inline;
+        margin: 0 2px;
+    }
+    .social-circle li a {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto 0 auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .social-circle li i {
+        margin: 0;
+        line-height: 40px;
+        text-align: center;
+    }
+}
+
+.rotate-center:hover {
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+    animation: rotate-center 0.6s ease-in-out both;
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

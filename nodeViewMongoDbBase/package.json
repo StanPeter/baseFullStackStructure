@@ -1,5 +1,5 @@
 {
-  "name": "Base nodeJs",
+  "name": "project",
   "version": "1.0.0",
   "description": "Base for restful api - Node",
   "main": "index.js",

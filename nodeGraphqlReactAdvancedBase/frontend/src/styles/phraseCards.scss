@@ -1,0 +1,195 @@
+@use './vars' as var;
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+
+//PhraseCards.tsx
+.card-wrapper {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.card {
+    grid-template-rows: 20px 50px 1fr 50px;
+    transition: all 0.1s;
+    margin: 3.5rem 2rem 0.5rem 2rem;
+    text-align: center;
+    width: 550px;
+    height: 280px;
+    left: 420px;
+    top: 344px;
+    background: #e7eff6;
+    border: 1px solid #2a4d69;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 25%);
+    border-radius: 20px;
+    z-index: 3;
+    background: linear-gradient(30deg, #e7eff6 4%, #bee3ff 120%);
+
+    &:hover {
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.01);
+    }
+}
+
+.second-card {
+    @extend .card;
+
+    top: unset;
+    height: 293px;
+    width: 520px;
+    margin: 0 auto;
+    filter: opacity(0.8);
+    position: absolute;
+    left: 48px;
+    z-index: 2;
+}
+
+.third-card {
+    @extend .card;
+
+    top: 0;
+    height: 293px;
+    width: 470px;
+    margin: 0 auto;
+    filter: opacity(0.5);
+    z-index: 1;
+    position: absolute;
+    left: 70px;
+    transition: visibility 0s, opacity 0.5s linear;
+    visibility: visible;
+}
+
+.card-phrase {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #2a4d69;
+    // font-family: "Rye", cursive;
+    font-style: normal;
+    font-weight: normal;
+
+    & h2 {
+        font-size: 24px;
+        line-height: 37px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+
+.card-controls {
+    display: flex;
+    height: 19%;
+
+    & p {
+        font-size: 1.2rem;
+    }
+}
+
+.card-control-icon {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    opacity: 0.8;
+    color: #2a4d69;
+
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+        background-color: #adcbe3;
+    }
+}
+
+.card-control-thumbsUp {
+    @extend .card-control-icon;
+
+    border-bottom-right-radius: 15px;
+}
+
+.card-control-thumbsDown {
+    @extend .card-control-icon;
+
+    border-bottom-left-radius: 15px;
+}
+
+.card-control-continue {
+    @extend .card-control-icon;
+
+    transition: all 0.5s 0s ease;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    &.max-width {
+        width: 100%;
+    }
+
+    &.disabled {
+        background-color: #cbc9cc;
+        cursor: not-allowed;
+    }
+}
+
+.separator {
+    border: 0.3px solid #2a4d69;
+    opacity: 0.5;
+}
+
+//animations
+.animation-change-card {
+    animation: change-card 1s;
+}
+
+@keyframes change-card {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: translateX(0) scale(0.01);
+        transform-origin: 100% 0%;
+    }
+    80% {
+        transform: translateX(15%) scale(1.2);
+        transform-origin: 50% 25%;
+    }
+    100% {
+        transform: translateX(0%) scale(1);
+    }
+}
+
+//medias
+@media screen and (max-width: 450px) {
+    .card {
+        width: 100%;
+        height: 55%;
+    }
+
+    .separator {
+        margin: 1rem 0;
+    }
+
+    .card-phrase {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    .card-container {
+        justify-content: center;
+    }
+}

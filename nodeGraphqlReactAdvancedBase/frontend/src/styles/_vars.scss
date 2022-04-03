@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro&family=Stint+Ultra+Condensed&display=swap");
+
+//set the main color scheme
+$color-scheme: 0;
+
+$background-color: #e7f1f0;
+
+//havent used light accent and dark accent yet
+
+//schema 0 - light blue/dark blue (default)
+$light-shades: #dde5e6; //Use this color as the background for your dark-on-light designs, or the text color of an inverted design.
+$light-accent: #65A4C7; //Accent colors can be used to bring attention to design elements by contrasting with the rest of the palette.
+$main-color: #5d97b3; //This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity.
+$dark-accent: #635580; //Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best.
+$dark-shades: #002b38; //Use as the text color for dark-on-light designs, or as the background for inverted designs.
+
+@if $color-scheme == 1 {
+    //schema 1 - green / grey
+    $light-shades: #f0f0f0; /* brightest color */
+    $light-accent: #889674; /* light-accent */
+    $main-color: #5DB360; /* main color */
+    $dark-accent: #775F61; /* middle color */
+    $dark-shades: #35463F; /* darkest color */
+} @else if $color-scheme == 2 {
+    //schema 2 -  green/grey
+}
+
+//colors for the app
+
+$red: #a1484c;
+
+//font

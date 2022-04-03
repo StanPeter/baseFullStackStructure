@@ -1,0 +1,81 @@
+@use './vars' as var;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro&family=Stint+Ultra+Condensed&display=swap");
+
+/* global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* disable anoining pop up errors created by create-react-scripts */
+iframe {
+    display: none;
+}
+
+html {
+    font-size: 16px !important;
+}
+
+body {
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    background-color: var.$background-color;
+    // font-family: 'Barlow Condensed', sans-serif;
+    font-family: "Source Code Pro", monospace;
+}
+
+.appWrapper {
+    position: relative;
+    min-height: 100vh;
+}
+
+.bodyWrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15rem;
+    width: 80%;
+    margin: 12% auto 0;
+}
+
+.contentWrapper {
+    width: 85%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-form-wrapper {
+    max-width: 500px !important;
+    width: 500px !important;
+}
+
+@media screen and (max-width: 756px) {
+    html {
+        font-size: 14px !important;
+    }
+
+    // .custom-form-wrapper {
+    //     max-width: unset !important;
+    //     width: unset !important;
+    // }
+}
+
+@media screen and (max-width: 550px) {
+    // .contentWrapper {
+    //     width: 93%;
+    // }
+
+    .custom-form-wrapper {
+        max-width: unset !important;
+        width: unset !important;
+    }
+
+    .bodyWrapper {
+        width: 100%;
+    }
+}
